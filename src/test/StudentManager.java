@@ -54,17 +54,10 @@ public class StudentManager {
 
     	    return false;
     	}
-    public void displayStudents() {
-        if (students.length == 0 || students[0] == null) {
-            System.out.println("No students found.");
-        } else {
-            for (Student student : students) {
-                if (student != null) {
-                    System.out.println(student);
-                }
-            }
-        }
-    }
-    
-    }
+		public void searchStudent(int id) {
+			try (Scanner sc = new Scanner(System.in)) {
+				id = sc.nextInt();
+			}
+}
+
 

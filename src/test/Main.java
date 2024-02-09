@@ -9,6 +9,7 @@ public class Main {
 	        if (success) {
 	            System.out.println("Students successfully read from file.");
 	            studentManager.displayStudents();
+	           
 	        } else {
 	            System.out.println("Failed to read students from file.");
 	        }
