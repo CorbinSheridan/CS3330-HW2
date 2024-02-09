@@ -30,4 +30,9 @@ public class student {
 	public void setGrade(double grade){
 		this.grade = grade;
 	}
+	
+	//i do not think I did the toString correctly, please help
+	public String toString(){
+		return "student [name=" + name + ", id=" + id + ", grade=" + grade ;
+	}
 }
