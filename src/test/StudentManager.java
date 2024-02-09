@@ -54,17 +54,34 @@ public class StudentManager {
 
     	    return false;
     	}
-    public void displayStudents() {
-        if (students.length == 0 || students[0] == null) {
-            System.out.println("No students found.");
-        } else {
-            for (Student student : students) {
-                if (student != null) {
-                    System.out.println(student);
-                }
-            }
-        }
-    }
+    
+	    public void displayStudents() {
+	        if (students.length == 0 || students[0] == null) {
+	            System.out.println("No students found.");
+	        } else {
+	            for (Student student : students) {
+	                if (student != null) {
+	                    System.out.println(student);
+	                }
+	            }
+	        }
+	    }
+	    
+	    public boolean updateStudentGradeById(int id, double grade) {
+	    	
+	    	//Move through students
+	    	for(Student student : students) {
+	    		int thisId = student.getid();
+	    		
+	    		if(thisId == id) {
+	    			student.setGrade(grade);
+	    			return true; //student found, grade changed
+	    		}
+	    	}
+	    	
+	    	return false; //student not found
+	    }
+
     
     }
 
