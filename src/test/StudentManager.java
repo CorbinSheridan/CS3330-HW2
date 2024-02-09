@@ -71,9 +71,10 @@ public class StudentManager {
 		public void searchStudent(int id) {
 			try (Scanner sc = new Scanner(System.in)) {
 				id = sc.nextInt();
-			for (int i = 0; i < students.length; i++) {
-				if (students[i].getid() == id) {
-					System.out.println(students[i].toString());
+				for (Student student : students) {
+					if (student != null && student.getid() == id) {
+						System.out.println(student);
+						return;
 				}
 			}
 		}
