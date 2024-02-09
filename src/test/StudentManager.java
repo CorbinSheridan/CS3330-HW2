@@ -5,11 +5,11 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class StudentManager {
-    private student[] students;
+    private Student[] students;
 
     // Constructor
     public StudentManager(int size) {
-        students = new student[size];
+        students = new Student[size];
     }
 
     // Method to read student data from a file
@@ -29,7 +29,7 @@ public class StudentManager {
                     String name = parts[1];
                     double grade = Double.parseDouble(parts[2]);
 
-                    students[index] = new student(id, name, grade);
+                    students[index] = new Student(id, name, grade);
                     index++;
                 }
             }
@@ -44,5 +44,18 @@ public class StudentManager {
         }
 
         return false;
+    	}
+    public void displayStudents() {
+        if (students.length == 0 || students[0] == null) {
+            System.out.println("No students found.");
+        } else {
+            for (Student student : students) {
+                if (student != null) {
+                    System.out.println(student);
+                }
+            }
+        }
+    }
+    
     }
 
