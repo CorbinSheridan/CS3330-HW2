@@ -69,6 +69,7 @@ public class StudentManager {
     
 	
 		public void searchStudent(int id) {
+			System.out.println("Enter student id");
 			try (Scanner sc = new Scanner(System.in)) {
 				id = sc.nextInt();
 				for (Student student : students) {
