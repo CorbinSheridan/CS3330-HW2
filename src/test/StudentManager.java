@@ -53,9 +53,15 @@ public class StudentManager {
     	    }
 
     	    return false;
+<<<<<<< HEAD
     	
     }
 		public void displayStudents() {
+=======
+    	}
+    
+	    public void displayStudents() {
+>>>>>>> 16468a204d9e372b50bebd8539c364e68b854052
 	        if (students.length == 0 || students[0] == null) {
 	            System.out.println("No students found.");
 	        } else {
@@ -66,6 +72,25 @@ public class StudentManager {
 	            }
 	        }
 	    }
+<<<<<<< HEAD
+=======
+	    
+	    public boolean updateStudentGradeById(int id, double grade) {
+	    	
+	    	//Move through students
+	    	for(Student student : students) {
+	    		int thisId = student.getid();
+	    		
+	    		if(thisId == id) {
+	    			student.setGrade(grade);
+	    			return true; //student found, grade changed
+	    		}
+	    	}
+	    	
+	    	return false; //student not found
+	    }
+
+>>>>>>> 16468a204d9e372b50bebd8539c364e68b854052
     
 	
 		public void searchStudent(int id) {
