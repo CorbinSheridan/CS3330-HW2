@@ -33,6 +33,10 @@ public class student {
 	
 	//i do not think I did the toString correctly, please help
 	public String toString(){
-		return "student [name=" + name + ", id=" + id + ", grade=" + grade ;
+		return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", grade=" + grade +
+                '}';
 	}
 }
